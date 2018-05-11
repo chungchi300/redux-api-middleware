@@ -9,6 +9,7 @@ import _ from "lodash";
  * @param {object} action - The action to check
  * @returns {boolean}
  */
+
 function isRSAA(action) {
   return _.isPlainObject(action) && action.hasOwnProperty(RSAA);
 }
