@@ -1,5 +1,5 @@
 import RSAA from "./RSAA";
-import _ from "lodash";
+import isPlainObject from "lodash/isPlainObject";
 
 /**
  * Is the given action a plain JavaScript object with an [RSAA] property?
@@ -11,7 +11,7 @@ import _ from "lodash";
  */
 
 function isRSAA(action) {
-  return _.isPlainObject(action) && action.hasOwnProperty(RSAA);
+  return isPlainObject(action) && action.hasOwnProperty(RSAA);
 }
 
 /**
@@ -25,7 +25,7 @@ function isRSAA(action) {
 function isValidTypeDescriptor(obj) {
   const validKeys = ["type", "payload", "meta"];
 
-  if (!_.isPlainObject(obj)) {
+  if (!isPlainObject(obj)) {
     return false;
   }
   for (let key in obj) {
@@ -89,7 +89,7 @@ function validateRSAA(action) {
   }
 
   const callAPI = action[RSAA];
-  if (!_.isPlainObject(callAPI)) {
+  if (!isPlainObject(callAPI)) {
     validationErrors.push("[RSAA] property must be a plain JavaScript object");
   }
   for (let key in callAPI) {
@@ -125,7 +125,7 @@ function validateRSAA(action) {
 
   if (
     typeof headers !== "undefined" &&
-    !_.isPlainObject(headers) &&
+    !isPlainObject(headers) &&
     typeof headers !== "function"
   ) {
     validationErrors.push(
@@ -134,7 +134,7 @@ function validateRSAA(action) {
   }
   if (
     typeof options !== "undefined" &&
-    !_.isPlainObject(options) &&
+    !isPlainObject(options) &&
     typeof options !== "function"
   ) {
     validationErrors.push(
