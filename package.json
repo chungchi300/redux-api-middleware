@@ -15,14 +15,13 @@
   },
   "license": "MIT",
   "dependencies": {
-    "lodash.isplainobject": "^4.0.6"
+    "lodash": "^4.17.10"
   },
   "devDependencies": {
     "coveralls": "^3.0.0",
     "isomorphic-fetch": "^2.1.1",
     "nock": "^9.1.0",
     "prettier": "^1.5.3",
-
     "ts-node": "^6.0.3",
     "typescript": "^2.8.3",
     "shelljs": "^0.8.2",
