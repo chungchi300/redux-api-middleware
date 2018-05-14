@@ -4,18 +4,27 @@
   "description": "Typescript Redux middleware for calling an API.",
   "main": "dist/index.js",
   "scripts": {
-    "build": "node ./make.js lib"
+    "build": "node ./make.js lib",
+    "jest": "npx jest"
   },
   "repository": "agraboso/redux-api-middleware",
   "homepage": "https://github.com/agraboso/redux-api-middleware",
-  "keywords": ["redux", "api", "middleware", "redux-middleware", "flux"],
+  "keywords": [
+    "redux",
+    "api",
+    "middleware",
+    "redux-middleware",
+    "flux"
+  ],
   "author": {
     "name": "Alberto Garcia-Raboso",
     "email": "agraboso@gmail.com"
   },
   "license": "MIT",
   "dependencies": {
-    "lodash": "^4.17.10"
+    "jest": "^22.4.3",
+    "lodash": "^4.17.10",
+    "ts-jest": "^22.4.5"
   },
   "devDependencies": {
     "coveralls": "^3.0.0",
@@ -26,7 +35,7 @@
     "typescript": "^2.8.3",
     "shelljs": "^0.8.2",
     "@coldmind/tspath": "ssh://git@github.com:cdagli/tspath.git",
-    "tap-spec": "^4.1.1 ",
-    "tape": "^4.8.0"
+    "@types/jest": "^22.2.3",
+    "jest": "*"
   }
 }
